@@ -6,3 +6,14 @@
         }
     }
 }
+
+//Images
+@mixin img-position($dis: block, $mar-l: auto, $mar-r: auto, $mar-t: 10px, $max-w: 100%) {
+    display: $dis;
+    margin-left: $mar-l;
+    margin-right: $mar-r;
+    margin-top: $mar-t;
+    max-width: $max-w; 
+
+    @content;
+}
