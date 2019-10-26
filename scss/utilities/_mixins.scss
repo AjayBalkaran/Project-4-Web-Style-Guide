@@ -22,8 +22,8 @@
         .#{$key} {
         background-color: $color;
         &:hover {
-            background-color: lighten($color, 15%)
-            transition: background-color 0.2s ease-in-out
+            background-color: lighten($color, 15%);
+            transition: background-color 0.2s ease-in-out;
           }
         }
     }
