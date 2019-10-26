@@ -36,4 +36,6 @@ $color-themes: (
 );
 
 //-----------Breakpoints------------------
-$break-large: 768px;
+$breakpoints: (
+    "large": 768px,
+); 

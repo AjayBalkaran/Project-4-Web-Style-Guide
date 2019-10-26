@@ -7,13 +7,26 @@
     }
 }
 
-//Images
-@mixin img-position($dis: block, $mar-l: auto, $mar-r: auto, $mar-t: 10px, $max-w: 100%) {
+//Centered
+@mixin centered($dis: block, $mar-l: auto, $mar-r: auto) {
     display: $dis;
     margin-left: $mar-l;
     margin-right: $mar-r;
-    margin-top: $mar-t;
-    max-width: $max-w; 
 
     @content;
+}
+
+//Flex
+@mixin flexed($dis: flex, $f-dir: column) {
+    display: flex;
+    flex-direction: column;
+    
+    @content;
+}
+
+
+// Media queries 
+
+@mixin mq($break) {
+    $value: map-get($breakpoints, $break);
 }
