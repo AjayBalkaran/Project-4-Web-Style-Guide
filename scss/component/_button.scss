@@ -14,26 +14,9 @@
       padding: 10px 30px;
     }
   }
-  
-  .default {
-    background-color: $color-button-default;
-  }
-  
-  .error {
-    background-color: $color-button-error;
-  }
-  
-  .info {
-    background-color: $color-button-info;
-  }
-  
-  .success {
-    background-color: $color-button-success;
-  }
-  
-  .warning {
-    background-color: $color-button-warning;
-  }
+
+  @include btn-color($button-colors);
+
 
   @include mq("large") {
     .btn + .btn {

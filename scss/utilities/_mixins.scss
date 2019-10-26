@@ -16,6 +16,18 @@
     }
 }
 
+//Button Lighten
+@mixin btn-color($map) {
+    @each $key,$color in $button-colors {
+        .#{$key} {
+        background-color: $color;
+        &:hover {
+            background-color: lighten($color, 10%)
+          }
+        }
+    }
+}
+
 
 //Centered
 @mixin centered($dis: block, $mar-l: auto, $mar-r: auto) {

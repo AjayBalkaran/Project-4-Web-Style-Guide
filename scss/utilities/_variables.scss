@@ -8,11 +8,14 @@ $color-font-primary: #777;
 $color-white: #fff;
 $color-border-img: #ccc;
 
-$color-button-default: #51ddfc;
-$color-button-error: #e4757a;
-$color-button-info: #927bc1;
-$color-button-success: #63cc82;
-$color-button-warning: #fd7856;
+// ---------Button Colors----------------
+$button-colors: (
+     "default": #51ddfc,
+     "success": #63cc82,
+       "error": #e4757a,
+     "warning": #fd7856,
+        "info": #927bc1,
+    );
 
 // Fonts
 $font-stack-primary: 'Lato', sans-serif;
@@ -21,17 +24,17 @@ $font-stack-primary: 'Lato', sans-serif;
 //-----------Theme Colors----------------
 
 $color-themes: ( 
-    "1": $color-button-info,
-    "2": $color-button-warning,
+    "1": map-get($button-colors, "info"),
+    "2": map-get($button-colors, "warning"),
     "3": #deb2ee,
     "4": #7ee6fd,
     "5": #88d9a0,
     "6": #4da2bb,  
     "7": #ec9fa3,
     "8": #fd9f85,
-    "9": $color-button-error,
-   "10": $color-button-success,
-   "11": $color-button-info,
+    "9": map-get($button-colors, "error"),
+   "10": map-get($button-colors, "success"),
+   "11": map-get($button-colors, "info"),
    "12": #80e8d1,
 );
 
