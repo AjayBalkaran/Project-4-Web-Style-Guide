@@ -10,6 +10,9 @@
     padding: 10px 0;
     text-transform: uppercase;
     border-radius: 5px;
+    @include mq("large") {
+      padding: 10px 30px;
+    }
   }
   
   .default {
@@ -31,3 +34,9 @@
   .warning {
     background-color: $color-button-warning;
   }
+
+  @include mq("large") {
+    .btn + .btn {
+      margin-left: 10px;
+    }
+}

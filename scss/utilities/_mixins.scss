@@ -7,6 +7,16 @@
     }
 }
 
+// Flex-basis
+@mixin flex-basis($map) {
+    @each $col, $flex-basis in $map {
+        &-#{$col} {
+            flex-basis: $flex-basis;
+        }
+    }
+}
+
+
 //Centered
 @mixin centered($dis: block, $mar-l: auto, $mar-r: auto) {
     display: $dis;
@@ -30,7 +40,7 @@
 @mixin mq($break) {
     $value: map-get($breakpoints, $break);
     
-    @media (max-width: $value) {
+    @media (min-width: $value) {
         @content;
     }
 }

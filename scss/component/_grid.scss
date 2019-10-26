@@ -4,11 +4,21 @@
 
 .container {
     padding: 0 10px;
+    
+    @include mq("large") {
+        @include centered {
+          max-width: 1400px;
+        }
+    }
   }
   
   .row {
     @include flexed {
       padding: 1em 10px;
+     
+      @include mq("large") {
+        flex-direction: row;
+      }
     }
   }
   
@@ -18,6 +28,13 @@
     min-height: 25px;
     padding: 10px;
     border-radius: 5px;
+
+    @include mq("large") {
+      display: flex;
+      justify-content: center;
+      margin-top: 0;
+      align-items: center;
+    }
   }
 
   .theme.col {
@@ -27,3 +44,19 @@
   .card {
     flex-basis: 100%;
   }
+
+  .col {
+    @include mq("large") {
+      @include flex-basis($flex-basis)
+    }
+  }
+
+  @include mq("large") {
+    .centered {
+      @include centered();
+  }
+  
+  [class^=col] + [class^=col] {
+    margin-left: 10px;
+  }
+}

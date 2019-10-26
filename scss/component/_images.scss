@@ -23,3 +23,9 @@
     @include centered();
   }
   
+  @include mq("large") {
+    .logo {
+      margin-left: initial;
+      margin-right: initial;
+    }
+}
