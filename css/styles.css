@@ -404,35 +404,40 @@ a {
   background-color: #51ddfc;
 }
 .default:hover {
-  background-color: #83e7fd;
+  background-color: #9cecfd;
+  transition: background-color 200ms ease-in-out;
 }
 
 .success {
   background-color: #63cc82;
 }
 .success:hover {
-  background-color: #89d9a1;
+  background-color: #9ddfb0;
+  transition: background-color 200ms ease-in-out;
 }
 
 .error {
   background-color: #e4757a;
 }
 .error:hover {
-  background-color: #eca0a3;
+  background-color: #f1b5b8;
+  transition: background-color 200ms ease-in-out;
 }
 
 .warning {
   background-color: #fd7856;
 }
 .warning:hover {
-  background-color: #fea088;
+  background-color: #feb4a2;
+  transition: background-color 200ms ease-in-out;
 }
 
 .info {
   background-color: #927bc1;
 }
 .info:hover {
-  background-color: #af9ed1;
+  background-color: #bdafd9;
+  transition: background-color 200ms ease-in-out;
 }
 
 @media (min-width: 768px) {
@@ -623,15 +628,14 @@ a {
   width: 100%;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
+.nav-link:hover {
+  color: #fff;
+  background-color: #58e1c1;
+}
 @media (min-width: 768px) {
   .nav-link {
     flex-basis: 100px;
   }
-}
-
-.nav-link:hover {
-  color: #fff;
-  background-color: #58e1c1;
 }
 
 /* ============================================= */
